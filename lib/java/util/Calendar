@@ -1,0 +1,17 @@
+#Calendar
+
+##获得实例
+ Calendar c = Calendar.getInstance();
+
+##设置时间
+ calendar.setTime(new Date());
+ 
+##设置时分秒
+calendar.set(Calendar.YEAR,
+            Integer.parseInt(ClearingcenterDateUtils.fetchYear(lastClearingDate)));
+calendar.set(Calendar.MONTH, ClearingcenterDateUtils.fetchMonth(lastClearingDate) - 1);
+calendar.set(Calendar.DAY_OF_MONTH, ClearingcenterDateUtils.fetchDay(lastClearingDate));
+ 
+Calendar.MONTH 是从0开始的。
+
+
