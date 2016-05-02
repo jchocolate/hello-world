@@ -1,0 +1,36 @@
+
+
+# 几个时间格式
+
+```java
+public final static String  shortFormat          = "yyyyMMdd";
+public final static String  longFormat           = "yyyyMMddHHmmss";
+public final static String  webFormat            = "yyyy-MM-dd";
+public final static String  timeFormat           = "HHmmss";
+public final static String  monthFormat          = "yyyyMM";
+public final static String  chineseDtFormat      = "yyyy年MM月dd日";
+public final static String  newFormat            = "yyyy-MM-dd HH:mm:ss";
+public final static String  noSecondFormat       = "yyyy-MM-dd HH:mm";
+```
+
+
+
+# String to Date
+
+```java
+String format = "yyyy-MM-dd HH:mm:ss";
+DateFormat df = new SimpleDateFormat(format);
+Date d = df.parse("2015-08-03 00:30:00");
+```
+
+
+
+# Date to String
+
+```java
+        String format = "yyyy-MM-dd HH:mm:ss";
+        Date date = new Date();
+        String dateStr = new SimpleDateFormat(format).format(date);
+        System.out.println(dateStr);
+```
+
