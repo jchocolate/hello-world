@@ -23,5 +23,38 @@ Calendar.MONTH 是从0开始的。
  --直接设置年数
  calendar.set(Calendar.YEAR, 2010);
  
+## 设定月份
+-- add月份
+-- 如果日期是月份的最后一天。没有31号。取值逻辑不清楚。所以最好还是不要怎么去用
+        Date date = getDateByStr("2016-05-31 01:01:01", formate);
 
+        Calendar calendar = Calendar.getInstance();
 
+        calendar.setTime(date);
+
+        printCalendar(calendar);
+
+        doSetCalendar(calendar, Calendar.MONTH, 0);
+
+        doAddCalendar(calendar, Calendar.MONTH, 1);
+
+        doAddCalendar(calendar, Calendar.MONTH, 1);
+
+        doAddCalendar(calendar, Calendar.MONTH, 1);
+
+        doAddCalendar(calendar, Calendar.MONTH, 1);
+
+    static void doAddCalendar(Calendar calendar, int field, int value) {
+        calendar.add(field, value);
+        printCalendar(calendar);
+
+    }
+    
+ --set也会有这个问题
+ Date date = getDateByStr("2016-05-31 01:01:01", formate);
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.setTime(date);
+
+        calendar.set(field, 1);  -- 展示的是 2016-03-02 01:01:01  不是2月的最后一天
