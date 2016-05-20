@@ -1,0 +1,5 @@
+
+# 找出transition_code出现多次的情况
+```
+select transition_code,count(*) from cc_transition_target_mapping b group by transition_code having count(*)>=2
+```
